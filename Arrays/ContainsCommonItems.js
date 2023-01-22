@@ -14,25 +14,33 @@
 
 // // O(a*b)
 
-function ContainsCommonItem(arr1, arr2){
-    let map = {}; 
-    for (let index = 0; index < arr1.length; index++) {
-        if (!map[arr1[index]]) {
-            const item = arr1[index];
-            map[item] = true;
-        }
-    }  
+// function ContainsCommonItem(arr1, arr2){
+//     let map = {}; 
+//     for (let index = 0; index < arr1.length; index++) {
+//         if (!map[arr1[index]]) {
+//             const item = arr1[index];
+//             map[item] = true;
+//         }
+//     }  
 
-    for (let index = 0; index < arr2.length; index++) {
-        if (map[arr2[index]]) {
-            return true;
-        }
-    }
+//     for (let index = 0; index < arr2.length; index++) {
+//         if (map[arr2[index]]) {
+//             return true;
+//         }
+//     }
 
-    return false;
+//     return false;
+// }
+
+// result = ContainsCommonItem(['a','b','c','x'],['z','y','x'])
+// console.log(result);
+
+// // O(a+b)
+
+function ContainsCommonItem3(arr1, arr2){
+    return arr1.some(item  => arr2.includes(item));
 }
 
-result = ContainsCommonItem(['a','b','c','x'],['z','y','x'])
+result = ContainsCommonItem3(['a','b','c','x'],['z','y','x'])
 console.log(result);
 
-// O(a+b)
