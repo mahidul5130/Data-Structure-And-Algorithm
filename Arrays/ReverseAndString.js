@@ -22,10 +22,21 @@ result = reverse("abcdef")
 
 console.log(result);
 
-
+// Increase Readabilty
 function reverse2(str) {
     return str.split('').reverse().join('');
 }
 
 result = reverse2(result);
+console.log(result);
+
+
+// Increase Readabilty
+const reverse3 = str=>str.split('').reverse().join('');
+result = reverse3(result);
+console.log(result);
+
+// Increase Readabilty
+const reverse4 = str=>[...str].reverse().join('');
+result = reverse3(result);
 console.log(result);
