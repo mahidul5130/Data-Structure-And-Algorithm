@@ -35,7 +35,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "ArrayList [FirstName=" + FirstName + ", LastName=" + LastName + ", id=" + id + "]";
+        return "Employee [FirstName=" + FirstName + ", LastName=" + LastName + ", id=" + id + "]";
     }
 
     @Override
