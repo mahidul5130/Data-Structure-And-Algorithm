@@ -1,3 +1,8 @@
+import java.util.LinkedList;
+import java.util.Stack;
+
+import javax.print.DocFlavor.STRING;
+
 public class App {
 
     public static void main(String[] args) {
@@ -14,6 +19,26 @@ public class App {
     }
 
     public static boolean checkForPalindrome(String string) {
-        return false;
+        LinkedList<Character> stack = new LinkedList<Character>();
+        StringBuilder stringNoPunctuation = new StringBuilder(string.length());
+        String stringLowerCase = string.toLowerCase();
+
+        for (int i = 0; i < stringLowerCase.length(); i++) {
+            char c = stringLowerCase.charAt(i);
+            if (c >= 'a' && c <= 'z') {
+                stringNoPunctuation.append(c);
+                stack.push(c);
+            }
+        }
+
+        StringBuilder reverseStringNoPunctuation = new StringBuilder(stack.size());
+        while (!stack.isEmpty()) {
+            reverseStringNoPunctuation.append(stack.pop());
+        }
+
+        // System.out.println(reverseStringNoPunctuation);
+        // System.out.println(stringNoPunctuation);
+
+        return reverseStringNoPunctuation.toString().equals(stringNoPunctuation.toString());
     }
 }
