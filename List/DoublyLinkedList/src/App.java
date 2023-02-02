@@ -1,11 +1,8 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Employee mahidul = new Employee("Md. Maksudul Haque", "Siam", 1);
-        Employee maksudul = new Employee("Md. Mahidul Haque", "Sijan", 2);
+        Employee mahidul = new Employee("Md. Mahidul Haque", "Sijan", 1);
+        Employee maksudul = new Employee("Md. Maksudul Haque", "Siam", 2);
         Employee samiul = new Employee("Md. Samiul Haque", "Sohan",3);
 
         System.out.println();
@@ -69,10 +66,10 @@ public class App {
 
         System.out.println();
 
-        // System.out.println("Add before an item: ");
-        // Employee ovro = new Employee("Md. Ovro Haque", "Ovro",5);
-        // employeelinkedlist.addToBefore(ovro, maksudul);
-        // employeelinkedlist.printList();
-        // System.out.println(employeelinkedlist.getSize());
+        System.out.println("Add before an item: ");
+        Employee ovro = new Employee("Md. Ovro Haque", "Ovro",5);
+        employeelinkedlist.addBefore(ovro, mahidul);
+        employeelinkedlist.printList();
+        System.out.println(employeelinkedlist.getSize());
     }
 }

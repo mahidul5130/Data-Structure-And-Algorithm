@@ -28,6 +28,42 @@ public class EmployeeLinkedList {
         size++;
     }
 
+    public boolean addBefore(Employee newEmployee, Employee existingEmployee) {
+
+        // return true if you were able to successfully add the employee
+        // into the list before the existing employee. Return false
+        // if the existing employee doesn't exist in the list
+
+        if (head == null) {
+            return false;
+        }
+
+        // find the existing employee
+        EmployeeNode current = head;
+        while (current != null && !current.getEmployee().equals(existingEmployee)) {
+            current = current.getNext();
+        }
+
+        if (current == null) {
+            return false;
+        }
+
+        EmployeeNode newNode = new EmployeeNode(newEmployee);
+        newNode.setPrevious(current.getPrevious());
+        newNode.setNext(current);
+        current.setPrevious(newNode);
+
+        if (head == current) {
+            head = newNode;
+        } else {
+            newNode.getPrevious().setNext(newNode);
+        }
+
+        size++;
+
+        return true;
+    }
+
     public int getSize() {
         return size;
     }
@@ -63,10 +99,9 @@ public class EmployeeLinkedList {
 
         EmployeeNode removedNode = tail;
 
-        if(tail.getPrevious() == null){
+        if (tail.getPrevious() == null) {
             head = null;
-        }
-        else{
+        } else {
             tail.getPrevious().setNext(null);
         }
 
