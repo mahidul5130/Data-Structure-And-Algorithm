@@ -45,9 +45,37 @@ public class EmployeeLinkedList {
         }
 
         EmployeeNode removedNode = head;
+
+        if (head.getNext() == null) {
+            tail = null;
+        } else {
+            head.getNext().setPrevious(null);
+        }
         head = head.getNext();
         size--;
         removedNode.setNext(null);
+        return removedNode;
+    }
+
+    public EmployeeNode removeFromEnd() {
+
+        if (isEmpty()) {
+            return null;
+        }
+
+        EmployeeNode removedNode = tail;
+
+        if(tail.getPrevious() == null){
+            head = null;
+        }
+        else{
+            tail.getPrevious().setNext(null);
+        }
+
+        tail = tail.getPrevious();
+
+        size--;
+        removedNode.setPrevious(null);
         return removedNode;
     }
 

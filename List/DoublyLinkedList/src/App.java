@@ -10,6 +10,7 @@ public class App {
 
         System.out.println();
 
+        System.out.println("Add to Front:");
         EmployeeLinkedList employeelinkedlist =  new EmployeeLinkedList();
         employeelinkedlist.addToFront(mahidul);
         employeelinkedlist.addToFront(maksudul);
@@ -19,10 +20,12 @@ public class App {
 
         System.out.println();
 
+        System.out.println("Getting the size: ");
         System.out.println(employeelinkedlist.getSize());
 
         System.out.println();
 
+        System.out.println("Add to End: ");
         Employee mahjabeen = new Employee("Md. Mahjabeen Haque", "Shoilee",4);
         employeelinkedlist.addToFront(mahjabeen);
         employeelinkedlist.printList();
@@ -30,20 +33,37 @@ public class App {
 
         System.out.println();
 
+        System.out.println("Check If Empty: ");
         System.out.println(employeelinkedlist.isEmpty());
 
         System.out.println();
 
         System.out.println();
 
-        System.out.println(employeelinkedlist.removeFromFront());
+        System.out.println("Remove From The Front: ");
+        System.out.println("Removed Item = "+employeelinkedlist.removeFromFront());
         employeelinkedlist.printList();
         System.out.println(employeelinkedlist.getSize());
 
         System.out.println();
 
+        System.out.println("Adding to the End: ");
         Employee shoilee = new Employee("Md. Mahjabeen Haque", "Shoilee",0);
         employeelinkedlist.addToEnd(shoilee);
+        employeelinkedlist.printList();
+        System.out.println(employeelinkedlist.getSize());
+
+        System.out.println();
+
+        System.out.println("Remove From The Front: ");
+        System.out.println("Removed Item = "+employeelinkedlist.removeFromFront());
+        employeelinkedlist.printList();
+        System.out.println(employeelinkedlist.getSize());
+
+        System.out.println();
+
+        System.out.println("Remove From The End: ");
+        System.out.println("Removed Item = "+employeelinkedlist.removeFromEnd());
         employeelinkedlist.printList();
         System.out.println(employeelinkedlist.getSize());
 
