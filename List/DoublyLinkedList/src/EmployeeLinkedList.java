@@ -1,5 +1,3 @@
-import org.w3c.dom.Node;
-
 public class EmployeeLinkedList {
 
     private EmployeeNode head;
@@ -24,7 +22,7 @@ public class EmployeeLinkedList {
             head = employeenode;
         } else {
             tail.setNext(employeenode);
-            employeenode.setPrevious(employeenode);
+            employeenode.setPrevious(tail);
         }
         tail = employeenode;
         size++;
