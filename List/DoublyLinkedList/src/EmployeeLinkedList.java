@@ -18,6 +18,18 @@ public class EmployeeLinkedList {
         size++;
     }
 
+    public void addToEnd(Employee employee) {
+        EmployeeNode employeenode = new EmployeeNode(employee);
+        if (tail == null) {
+            head = employeenode;
+        } else {
+            tail.setNext(employeenode);
+            employeenode.setPrevious(employeenode);
+        }
+        tail = employeenode;
+        size++;
+    }
+
     public int getSize() {
         return size;
     }

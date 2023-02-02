@@ -39,6 +39,14 @@ public class App {
         System.out.println(employeelinkedlist.removeFromFront());
         employeelinkedlist.printList();
         System.out.println(employeelinkedlist.getSize());
+
+        System.out.println();
+
+        Employee shoilee = new Employee("Md. Mahjabeen Haque", "Shoilee",0);
+        employeelinkedlist.addToEnd(shoilee);
+        employeelinkedlist.printList();
+        System.out.println(employeelinkedlist.getSize());
+
         System.out.println();
     }
 }
