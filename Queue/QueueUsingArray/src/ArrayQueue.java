@@ -26,7 +26,7 @@ public class ArrayQueue {
         return queue[front];
     }
 
-    public Employee pop() {
+    public Employee reomove() {
         if (size() == 0) {
             throw new NoSuchElementException();
         }

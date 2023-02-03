@@ -15,7 +15,7 @@ public class App {
         System.out.println();
 
         System.out.println();
-        System.out.println("Popped: " + queue.pop());
+        System.out.println("Popped: " + queue.remove());
         System.out.println();
 
         System.out.println();
