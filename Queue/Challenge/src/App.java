@@ -26,7 +26,7 @@ public class App {
             if (string.charAt(i) >= 'a' && string.charAt(i) <= 'z') {
                 
                 stack.push(string.charAt(i));
-                queue.add(string.charAt(i));
+                queue.addLast(string.charAt(i));
 
             }
         }
@@ -46,6 +46,8 @@ public class App {
             palindrome = false;
         }
         
+        System.out.println(stack);
+        System.out.println(queue);
 
         return palindrome;
     }
