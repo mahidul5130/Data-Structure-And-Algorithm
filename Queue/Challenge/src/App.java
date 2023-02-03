@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class App {
 
     public static void main(String[] args) {
@@ -14,7 +16,37 @@ public class App {
     }
 
     public static boolean checkForPalindrome(String string) {
+
+        string = string.toLowerCase();
+        LinkedList<Character> stack = new LinkedList<>();
+        LinkedList<Character> queue = new LinkedList<>();
+
+        for (int i = 0; i < string.length(); i++) {
+            
+            if (string.charAt(i) >= 'a' && string.charAt(i) <= 'z') {
+                
+                stack.push(string.charAt(i));
+                queue.add(string.charAt(i));
+
+            }
+        }
         
-        return false;
+        boolean palindrome = true;
+
+        if (stack.size() == queue.size()) {
+            for (int i = 0; i < stack.size(); i++) {
+                if (stack.pop() != queue.remove()) {
+                    palindrome = false;
+                    break;
+                }
+            }
+        }
+
+        else{
+            palindrome = false;
+        }
+        
+
+        return palindrome;
     }
 }
