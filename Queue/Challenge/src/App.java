@@ -35,7 +35,7 @@ public class App {
 
         if (stack.size() == queue.size()) {
             for (int i = 0; i < stack.size(); i++) {
-                if (stack.pop() != queue.remove()) {
+                if (stack.pop() != queue.removeFirst()) {
                     palindrome = false;
                     break;
                 }
@@ -46,8 +46,8 @@ public class App {
             palindrome = false;
         }
         
-        System.out.println(stack);
-        System.out.println(queue);
+        // System.out.println(stack);
+        // System.out.println(queue);
 
         return palindrome;
     }
